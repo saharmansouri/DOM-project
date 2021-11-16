@@ -1,0 +1,110 @@
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    --card__width:270px
+}
+body{
+    font-size: 1.4rem;
+}
+.container{
+    background-color: #e8e8e8;
+    width: 90vw;
+    padding: 2%;
+    margin: auto;
+}
+.container h1{
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: capitalize;
+    padding-left: 60px;
+    padding-bottom: 0;
+}
+#movie-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    padding: 8rem;
+    justify-content: start;
+}
+.movie-card{
+    width: var(--card__width);
+    background-color: white;
+    display: grid;
+    grid-template-areas: 'img img'
+                          'title IMBD'
+                           'update update-info'
+                             'date time';
+align-items: start;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    border-radius: 15px;
+
+}
+.movie-card img{
+    grid-area: img;
+    width: var(--card__width);
+    height: 400px;
+    object-fit: cover;
+}
+.title{
+    grid-area: title;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    font-weight: 900;
+}
+.imbd{
+    grid-area: IMBD;
+    line-height: 3rem;
+    font-weight: 900;
+}
+.update{
+    grid-area: update;
+    color: darkgray;
+}
+.update-info{
+    grid-area: update-info;
+    color: darkgray;
+}
+.date{
+    grid-area: date;
+}
+.time{
+    grid-area: time;
+}
+.imbd span{
+    color: blue;
+    padding: 0 4px;
+}
+.imdb, .title,.update,.update-info,.date,.time{
+    padding:0 8px ;
+}
+.navbar{
+    background-color: black;
+    width: 94vw;
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+}
+.navbar input{
+    width: 85vw;
+    height: 5vh;
+    border-radius: 7px;
+    font-size: 1.6rem;
+    color: darkgray;
+    padding-left: 20px;
+}
+.navbar a{
+    color: darkgrey;
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+}
